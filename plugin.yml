@@ -1,0 +1,76 @@
+name: NihaEss
+version: 1.0.0
+author: RyTheFirst
+website: rythefirst.uk
+main: uk.rythefirst.nihaess.Main
+api-version: 1.16
+commands:
+ help:
+  description: Simple help command
+ modhelp:
+  description: Mod help
+ pinfo:
+  description: Providees information
+ shopinfo:
+  description: Shop Info
+ dummys:
+  description: dummys
+ eggdeed:
+  description: Egg Deed Item
+ live:
+  description: Check if the stream is live.
+ sinfo:
+  description: Get current Stream info!
+ bounties:
+  description: Bounties
+ twitch:
+  description: Twitch
+ cast:
+  description: Broadcast
+ setbounty:
+  description: Set Bounty
+ savebounties:
+  description: Save Bounties
+ website:
+  description: Website
+ webmap:
+  description: Webmap
+ togglemention:
+  description: toggle mentions
+ removebounty:
+  description: Removes Bounties
+ streamdmg:
+  description: Stream Damage Toggle
+ sellxp:
+  description: Sell XP for money.
+ reservedslots:
+  description: Reserved slots.
+ mding:
+  description: Mass ding.
+ shopfix:
+  description: Shop fix
+ bansword:
+  description: what it says on the tin.
+ report:
+  description: Report people.
+permissions:
+ niha.mod:
+  description: Mod
+ niha.nether:
+  description: allows walking on nether roof
+ niha.staff:
+  description: staff
+ niha.slot:
+  description: Permission to use reserved slots.
+ niha.mention.staff:
+  description: Bypass mention toggle
+ niha.bounties:
+  description: Bounties perms
+ niha.stream.toggle:
+  description: Toggle stream damage.
+ niha.chat.bypass:
+  description: Bypass Chat Filters
+ niha.admin:
+  description: Admins
+ niha.staff.bsword:
+  description: use the ban sword
