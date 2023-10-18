@@ -3,7 +3,7 @@ package uk.rythefirst.nihaess.util;
 import java.lang.ref.WeakReference;
 import java.util.Arrays;
 
-import org.apache.commons.lang.Validate;
+//import org.apache.commons.lang.Validate;
 import org.bukkit.entity.Player;
 
 public class ExperienceManager {
@@ -29,7 +29,7 @@ public class ExperienceManager {
 		 * @throws IllegalArgumentException if the player is null
 		 */
 		public ExperienceManager(Player player) {
-			Validate.notNull(player, "Player cannot be null");
+			//Validate.notNull(player, "Player cannot be null");
 			this.player = new WeakReference<Player>(player);
 			this.playerName = player.getName();
 		}
@@ -53,7 +53,7 @@ public class ExperienceManager {
 		}
 
 		/**
-		 * Initialize the XP lookup table. See http://minecraft.gamepedia.com/Experience
+		 * Initialise the XP lookup table. See http://minecraft.gamepedia.com/Experience
 		 *
 		 * @param maxLevel The highest level handled by the lookup tables
 		 */
@@ -223,7 +223,7 @@ public class ExperienceManager {
 			if (exp > xpTotalToReachLevel[xpTotalToReachLevel.length - 1]) {
 				// need to extend the lookup tables
 				int newMax = calculateLevelForExp(exp) * 2;
-				Validate.isTrue(newMax <= hardMaxLevel, "Level for exp " + exp + " > hard max level " + hardMaxLevel);
+				//Validate.isTrue(newMax <= hardMaxLevel, "Level for exp " + exp + " > hard max level " + hardMaxLevel);
 				initLookupTables(newMax);
 			}
 			int pos = Arrays.binarySearch(xpTotalToReachLevel, exp);
@@ -238,7 +238,7 @@ public class ExperienceManager {
 		 * @throws IllegalArgumentException if the level is less than 0
 		 */
 		public int getXpNeededToLevelUp(int level) {
-			Validate.isTrue(level >= 0, "Level may not be negative.");
+			//Validate.isTrue(level >= 0, "Level may not be negative.");
 			return level > 30 ? 62 + (level - 30) * 7 : level >= 16 ? 17 + (level - 15) * 3 : 17;
 		}
 
@@ -250,7 +250,7 @@ public class ExperienceManager {
 		 * @throws IllegalArgumentException if the level is less than 0 or greater than the current hard maximum
 		 */
 		public int getXpForLevel(int level) {
-			Validate.isTrue(level >= 0 && level <= hardMaxLevel, "Invalid level " + level + "(must be in range 0.." + hardMaxLevel + ")");
+			//Validate.isTrue(level >= 0 && level <= hardMaxLevel, "Invalid level " + level + "(must be in range 0.." + hardMaxLevel + ")");
 			if (level >= xpTotalToReachLevel.length) {
 				initLookupTables(level * 2);
 			}
